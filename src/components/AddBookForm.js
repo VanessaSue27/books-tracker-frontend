@@ -18,7 +18,7 @@ export const AddBookForm = () => {
     fetch(API_URL, { method: 'POST', body: formData })
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
+        window.location.reload();
       })
   };
 
