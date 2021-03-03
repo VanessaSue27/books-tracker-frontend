@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { BookCard } from './BookCard';
+import { BookListContainer } from '../styles/book-list-styles';
 
 const API_URL = 'https://vane-books-tracker.herokuapp.com/books';
 
@@ -18,10 +19,10 @@ export const BooksList = () => {
   }, []);
 
   return (
-    <section>
+    <BookListContainer>
       {books.map((book, index) => (
         <BookCard key={book._id} index={index} {...book} />
       ))}
-    </section>
+    </BookListContainer>
   );
 };

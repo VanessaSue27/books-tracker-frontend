@@ -4,6 +4,8 @@ import React, { useState, useRef } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
+import { FormContainer } from '../styles/book-form-styles';
+
 const API_URL = 'https://vane-books-tracker.herokuapp.com/books';
 
 export const AddBookForm = () => {
@@ -29,7 +31,7 @@ export const AddBookForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <FormContainer onSubmit={handleSubmit}>
       <label htmlFor="book-image">
         Book Image
         <input type="file" ref={fileInput} id="book-image" required />
@@ -49,6 +51,6 @@ export const AddBookForm = () => {
       <DatePicker selected={dateRead} onChange={(date) => setDateRead(date)} required />
 
       <button type="submit">ADD BOOK</button>
-    </form>
+    </FormContainer>
   );
 };
