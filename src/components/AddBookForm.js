@@ -32,8 +32,8 @@ export const AddBookForm = () => {
 
   return (
     <section>
-      <AddBookTitle>Add Book</AddBookTitle>
-      <SmallText>Yay! For finishing another book!~~</SmallText>
+      <AddBookTitle>Finished another book?</AddBookTitle>
+      <SmallText>Yay! Keep reading on!~~</SmallText>
       <FormContainer onSubmit={handleSubmit}>
         <Label htmlFor="book-name">
           Book&apos;s Name

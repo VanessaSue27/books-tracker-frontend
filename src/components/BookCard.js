@@ -1,16 +1,20 @@
 import React from 'react';
 import moment from 'moment';
 
-import { BookImage } from '../styles/book-card-styles';
+import { BookContainer, BookImage, BookDetailsContainer, BookName, Author, Number, FinishedText } from '../styles/book-card-styles';
 
 export const BookCard = ({ name, author, imageUrl, dateRead, index }) => {
   return (
-    <div>
-      <h3>{`Book number: ${index + 1}`}</h3>
-      <h3>{name}</h3>
-      <h3>{author}</h3>
+    <BookContainer>
+      <BookDetailsContainer>
+        <div style={{ width: 200 }}>
+          <BookName>{name}</BookName>
+          <Author>{author}</Author>
+        </div>
+        <Number>{index + 1}</Number>
+      </BookDetailsContainer>
+      <FinishedText>{`Finished Reading on: ${moment(dateRead).format('MMMM DD, YYYY')}`}</FinishedText>
       <BookImage src={imageUrl} alt="book cover" />
-      <h3>{`Finished Reading on: ${moment(dateRead).format('MMMM DD, YYYY')}`}</h3>
-    </div>
+    </BookContainer>
   );
 };
