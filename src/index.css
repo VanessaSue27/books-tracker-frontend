@@ -32,6 +32,7 @@ code {
   min-width: 320px;
   max-width: 600px;
   margin: auto;
+  background-color: white;
 }
 
 @media (min-width: 601px) {

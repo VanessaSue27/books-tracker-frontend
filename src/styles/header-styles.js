@@ -24,6 +24,7 @@ export const Title = styled.h1`
   z-index: 6;
   font-size: 27px;
   margin-left: 30px;
+  text-align: left;
 `;
 
 export const BookIcon = styled.img`
@@ -40,5 +41,3 @@ export const HeaderImage = styled.img`
   position: relative;
   z-index: 5;
 `;
-
-// font-family: 'Montserrat', sans-serif;

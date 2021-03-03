@@ -4,7 +4,7 @@ import React, { useState, useRef } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import { FormContainer } from '../styles/book-form-styles';
+import { FormContainer, AddBookTitle, SmallText, Input, DateLabel, Button, Label } from '../styles/book-form-styles';
 
 const API_URL = 'https://vane-books-tracker.herokuapp.com/books';
 
@@ -31,26 +31,30 @@ export const AddBookForm = () => {
   };
 
   return (
-    <FormContainer onSubmit={handleSubmit}>
-      <label htmlFor="book-image">
-        Book Image
-        <input type="file" ref={fileInput} id="book-image" required />
-      </label>
+    <section>
+      <AddBookTitle>Add Book</AddBookTitle>
+      <SmallText>Yay! For finishing another book!~~</SmallText>
+      <FormContainer onSubmit={handleSubmit}>
+        <Label htmlFor="book-name">
+          Book&apos;s Name
+          <Input type="text" value={name} onChange={(event) => setName(event.target.value)} id="book-name" required />
+        </Label>
 
-      <label htmlFor="book-name">
-        Book Name
-        <input type="text" value={name} onChange={(event) => setName(event.target.value)} id="book-name" required />
-      </label>
+        <Label htmlFor="book-author">
+          Author
+          <Input type="text" value={author} onChange={(event) => setAuthor(event.target.value)} id="book-author" required />
+        </Label>
 
-      <label htmlFor="book-author">
-        Book Author
-        <input type="text" value={author} onChange={(event) => setAuthor(event.target.value)} id="book-author" required />
-      </label>
+        <Label htmlFor="book-image">
+          Book&apos;s Cover Image
+          <Input type="file" ref={fileInput} id="book-image" required />
+        </Label>
 
-      <label>Date Read</label>
-      <DatePicker selected={dateRead} onChange={(date) => setDateRead(date)} required />
+        <DateLabel>Date Finished</DateLabel>
+        <DatePicker selected={dateRead} onChange={(date) => setDateRead(date)} required />
 
-      <button type="submit">ADD BOOK</button>
-    </FormContainer>
+        <Button type="submit">ADD BOOK</Button>
+      </FormContainer>
+    </section>
   );
 };
