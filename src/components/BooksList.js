@@ -12,14 +12,15 @@ export const BooksList = () => {
     fetch(API_URL)
       .then((res) => res.json())
       .then((json) => {
+        // console.log(json);
         setBooks(json);
       })
   }, []);
 
   return (
     <section>
-      {books.map((book) => (
-        <BookCard key={book._id} {...book} />
+      {books.map((book, index) => (
+        <BookCard key={book._id} index={index} {...book} />
       ))}
     </section>
   );
