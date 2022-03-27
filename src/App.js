@@ -5,7 +5,7 @@ import { Header } from './components/Header';
 import { Input, Label } from './styles/book-form-styles';
 
 export const App = () => {
-  const protectedWord = process.env.FORM_PROTECTION;
+  const protectedWord = process.env.REACT_APP_FORM_PROTECTION;
   const [password, setPassword] = useState('');
   const [passwordCorrect, setPasswordCorrect] = useState(false);
 
