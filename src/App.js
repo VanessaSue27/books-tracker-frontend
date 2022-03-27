@@ -11,6 +11,8 @@ export const App = () => {
 
   const submitPassword = () => {
     if (password === protectedWord) {
+      console.log('password', password);
+      console.log('protectedWord', protectedWord);
       setPasswordCorrect(true);
     }
   };
