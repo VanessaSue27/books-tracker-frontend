@@ -14,9 +14,6 @@ export const BooksList = () => {
     fetch(API_URL)
       .then((res) => res.json())
       .then((json) => {
-        // Next step is to get the books sorted by year and create different sections per year
-        // And also show the total per year
-        // Update styling of the whole app: form, sections of books read per year, etc.
         console.log(json);
         setBooks(json);
       })
