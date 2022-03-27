@@ -10,8 +10,6 @@ export const App = () => {
   const [passwordCorrect, setPasswordCorrect] = useState(false);
 
   const submitPassword = () => {
-    console.log('password', password);
-    console.log('protectedWord', protectedWord);
     if (password === protectedWord) {
       setPasswordCorrect(true);
     }
