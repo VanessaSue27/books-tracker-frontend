@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import protectedWord from './protected.js';
 import { AddBookForm } from './components/AddBookForm';
 import { BooksList } from './components/BooksList';
 import { Header } from './components/Header';
 import { Input, Label } from './styles/book-form-styles';
 
 export const App = () => {
+  const protectedWord = process.env.FORM_PROTECTION;
   const [password, setPassword] = useState('');
   const [passwordCorrect, setPasswordCorrect] = useState(false);
 
