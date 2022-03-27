@@ -42,6 +42,8 @@ export const DateLabel = styled.label`
 
 export const Label = styled.label`
   font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 `;
 
 export const Button = styled.button`
