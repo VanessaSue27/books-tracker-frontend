@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { AddBookForm } from './components/AddBookForm';
 import { BooksList } from './components/BooksList';
 import { Header } from './components/Header';
-import { Input, Label } from './styles/book-form-styles';
 
 export const App = () => {
   const protectedWord = process.env.REACT_APP_FORM_PROTECTION;
@@ -21,10 +20,10 @@ export const App = () => {
       {
         !passwordCorrect ?
           <>
-            <Label htmlFor="password">
+            <label htmlFor="password">
               Enter password to add new book:
-              <Input type="text" onChange={(event) => setPassword(event.target.value)} id="password" required />
-            </Label>
+              <input type="text" onChange={(event) => setPassword(event.target.value)} id="password" required />
+            </label>
             <button type="button" onClick={submitPassword}>Submit password</button>
           </>
           :

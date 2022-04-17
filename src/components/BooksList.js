@@ -1,9 +1,5 @@
-/* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
-
 import { BookCard } from './BookCard';
-import { BookListContainer } from '../styles/book-list-styles';
-import { AddBookTitle } from '../styles/book-form-styles';
 
 // const API_URL = 'https://vane-books-tracker.herokuapp.com/books';
 const API_URL = 'http://localhost:8080/books';
@@ -33,12 +29,12 @@ export const BooksList = () => {
 
   return (
     <>
-      <AddBookTitle>Books read so far this year...</AddBookTitle>
-      <BookListContainer>
+      <h2>Books read so far this year...</h2>
+      <section>
         {books.map((book, index) => (
           <BookCard key={book._id} index={index} {...book} />
         ))}
-      </BookListContainer>
+      </section>
     </>
   );
 };
