@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import '../styles/BookCard.css';
 
 export const BookCard = ({ name, author, imageUrl, dateRead, index }) => {
   return (
@@ -12,7 +13,7 @@ export const BookCard = ({ name, author, imageUrl, dateRead, index }) => {
         <h3>{index + 1}</h3>
       </div>
       <h4>{`Finished Reading on: ${moment(dateRead).format('MMMM DD, YYYY')}`}</h4>
-      <img src={imageUrl} alt="book cover" />
+      <img className="bookCoverImage" src={imageUrl} alt="book cover" />
     </div>
   );
 };

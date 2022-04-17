@@ -1,14 +1,15 @@
 body {
   margin: 0;
+  color: #ffffff;
 }
 
 /* Main wrapper: declared on root element in index.js */
 .root-container {
-  width: 100%;
+  margin: auto;
   min-width: 320px;
   max-width: 600px;
-  margin: auto;
-  background-color: white;
+  background-color: black;
+  /* border: 1px solid red; */
 }
 
 /* Styling that kicks in when bigger than 601px, so for web */
@@ -16,5 +17,6 @@ body {
   .root-container {
     margin-top: 50px;
     margin-bottom: 50px;
+    /* border: 1px solid green; */
   }
 }
