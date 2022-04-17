@@ -19,7 +19,6 @@ export const App = () => {
     <>
       <Header />
       {
-        // eslint-disable-next-line operator-linebreak
         !passwordCorrect ?
           <>
             <Label htmlFor="password">
@@ -28,7 +27,6 @@ export const App = () => {
             </Label>
             <button type="button" onClick={submitPassword}>Submit password</button>
           </>
-          // eslint-disable-next-line operator-linebreak
           :
           <AddBookForm />
       }
