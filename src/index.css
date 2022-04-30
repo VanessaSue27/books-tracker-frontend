@@ -12,14 +12,6 @@ body {
   background-color: black;
 }
 
-/* Styling that kicks in when bigger than 601px, so for web */
-@media (min-width: 601px) {
-  .root-container {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-}
-
 /* App.js styling */
 .passwordFormWrapper {
   display: flex;
@@ -63,4 +55,16 @@ body {
 
 .submitPasswordButton:hover {
   font-weight: bold;
+}
+
+/* Styling that kicks in when bigger than 601px, so for web */
+@media (min-width: 601px) {
+  .root-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .passwordInputLabel {
+    font-size: 16px;
+  }
 }

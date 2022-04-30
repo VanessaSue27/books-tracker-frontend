@@ -7,9 +7,11 @@ export const Header = () => {
       <div className="headerBGImageContainer" />
       <h1 className="headerAppTitle">Books Tracker</h1>
       <p className="headerAppDescription">
-        I&apos;ve set a personal resolution to spend more time off-screen and start reading more.
-        This app&apos;s goal is to help me keep track of the books I&apos;ve read since 2021 when
-        I started with this goal.
+        On 2021 I set myself a goal of picking up reading again. Mainly as a
+        way to spend more time off-screen, but also to reconnect with a hobby
+        I had abandoned. While relaxing, reading also feels like a productive
+        way of using my time off. This app is to keep track of what I&apos;ve read
+        ever since and, of course, keep practicing programming on a fun project.
       </p>
       <div className="headerTagsWrapper">
         <div className="headerTag">#readmore</div>

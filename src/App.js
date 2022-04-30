@@ -21,7 +21,7 @@ export const App = () => {
         !passwordCorrect ?
           <>
             <div className="passwordFormWrapper">
-              <h3 className="passwordInputLabel">Enter password to add new book:</h3>
+              <h3 className="passwordInputLabel">Enter password to add a book:</h3>
               <input className="passwordInput" type="text" onChange={(event) => setPassword(event.target.value)} required />
               <button className="submitPasswordButton" type="button" onClick={submitPassword}>Submit password</button>
             </div>

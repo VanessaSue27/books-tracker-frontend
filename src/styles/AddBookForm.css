@@ -1,0 +1,81 @@
+.addBookFormWrapper {
+  width: 60%;
+  margin: 0 auto;
+  padding: 22px;
+  border-radius: 10px;
+  color: #212529;
+  background-color: #ffffff;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addBookFormTitle {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.addBookFormSubText {
+  margin: 0;
+  padding-top: 3px;
+  padding-bottom: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.addBookFormComponents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addBookFormFieldName {
+  margin: 0;
+  padding-bottom: 8px;
+  font-size: 17px;
+}
+
+.addBookFormTextInput {
+  width: 60%;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #212529;
+  outline: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-align: center;
+}
+
+.addBookFormImageInput {
+  margin-top: 6px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.addBookButton {
+  margin-top: 22px;
+  width: 120px;
+  height: 33px;
+  border: none;
+  border-radius: 4px;
+  color: #212529;
+  background-color: #D8D2CB;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  cursor: pointer;
+}
+
+.addBookButton:hover {
+  font-weight: bold;
+}
+
+/* Styling that kicks in when bigger than 601px, so for web */
+@media (min-width: 601px) {
+  .addBookFormTitle {
+    font-size: 25px;
+  }
+
+  .addBookFormSubText {
+    font-size: 16px;
+  }
+}
