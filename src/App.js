@@ -20,11 +20,11 @@ export const App = () => {
       {
         !passwordCorrect ?
           <>
-            <label htmlFor="password">
-              Enter password to add new book:
-              <input type="text" onChange={(event) => setPassword(event.target.value)} id="password" required />
-            </label>
-            <button type="button" onClick={submitPassword}>Submit password</button>
+            <div className="passwordFormWrapper">
+              <h3 className="passwordInputLabel">Enter password to add new book:</h3>
+              <input className="passwordInput" type="text" onChange={(event) => setPassword(event.target.value)} required />
+              <button className="submitPasswordButton" type="button" onClick={submitPassword}>Submit password</button>
+            </div>
           </>
           :
           <AddBookForm />
