@@ -1,40 +1,47 @@
 import React, { useEffect, useState } from 'react';
 import { BookCard } from './BookCard';
+import '../styles/BooksList.css';
 
-// const API_URL = 'https://vane-books-tracker.herokuapp.com/books';
-const API_URL = 'http://localhost:8080/books';
-// const SORTED_BOOKS_ENDPOINT = 'http://localhost:8080/sortedBooks';
+// const SORTED_BOOKS = 'https://vane-books-tracker.herokuapp.com/sortedBooks';
+const SORTED_BOOKS = 'http://localhost:8080/sortedBooks';
 
 export const BooksList = () => {
-  const [books, setBooks] = useState([]);
-  // const [sortedBooks, setsortedBooks] = useState([]);
+  const [sortedBooks, setsortedBooks] = useState([]);
 
   useEffect(() => {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((json) => {
-        setBooks(json);
-      })
-  }, []);
-
-  /* useEffect(() => {
-    fetch(SORTED_BOOKS_ENDPOINT)
+    fetch(SORTED_BOOKS)
       .then((res) => res.json())
       .then((json) => {
         setsortedBooks(json);
       })
-  }, []); */
-
-  // console.log('sortedBooks', sortedBooks);
+  }, []);
 
   return (
     <>
-      <h2>Books read so far this year...</h2>
-      <section>
-        {books.map((book, index) => (
-          <BookCard key={book._id} index={index} {...book} />
-        ))}
-      </section>
+      {
+        sortedBooks.year2021 &&
+        <section className="booksListYearlySection">
+          <h2 className="booksListYearlySectionTitle">2021</h2>
+          <h4 className="booksListYearlySectionSubText">{`${sortedBooks.year2021.length} books read`}</h4>
+          <div className="booksListBooksCardsWrapper">
+            {sortedBooks.year2021.map((book, index) => (
+              <BookCard key={book._id} index={index} {...book} />
+            ))}
+          </div>
+        </section>
+      }
+      {
+        sortedBooks.year2022 &&
+        <section className="booksListYearlySection">
+          <h2 className="booksListYearlySectionTitle">2022</h2>
+          <h4 className="booksListYearlySectionSubText">{`${sortedBooks.year2022.length} books read`}</h4>
+          <div className="booksListBooksCardsWrapper">
+            {sortedBooks.year2022.map((book, index) => (
+              <BookCard key={book._id} index={index} {...book} />
+            ))}
+          </div>
+        </section>
+      }
     </>
   );
 };

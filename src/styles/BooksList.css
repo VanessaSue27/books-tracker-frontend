@@ -1,0 +1,20 @@
+.booksListYearlySection {
+  margin: 50px 20px 20px 20px;
+}
+
+.booksListYearlySectionTitle {
+  margin: 0;
+}
+
+.booksListYearlySectionSubText {
+  margin: 0;
+  margin-bottom: 20px;
+  color: #D8D2CB;
+}
+
+.booksListBooksCardsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

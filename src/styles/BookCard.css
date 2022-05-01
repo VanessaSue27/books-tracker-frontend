@@ -1,3 +1,32 @@
+.bookCard {
+  width: 40%;
+  margin-bottom: 35px;
+}
+
 .bookCoverImage {
-  width: 200px;
+  width: 100%;
+  border-radius: 14px;
+}
+
+.bookCardTitle {
+  margin: 0;
+  font-size: 20px;
+}
+
+.bookCardAuthor {
+  margin: 0;
+  color: #D8D2CB;
+  font-size: 16px;
+}
+
+.bookCardFinishedDate {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Styling that kicks in when bigger than 601px, so for web */
+@media (min-width: 601px) {
+  .bookCard {
+    width: 45%;
+  }
 }
