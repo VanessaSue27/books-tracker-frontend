@@ -12,7 +12,7 @@ export const BookCard = ({ name, author, imageUrl, dateRead }) => {
           <h4 className="bookCardAuthor">{author}</h4>
         </div>
       </div>
-      <h4 className="bookCardFinishedDate">{`Finished Reading on: ${moment(dateRead).format('MMMM DD, YYYY')}`}</h4>
+      <p className="bookCardFinishedDate">{`Finished Reading on: ${moment(dateRead).format('MMMM DD, YYYY')}`}</p>
     </div>
   );
 };
