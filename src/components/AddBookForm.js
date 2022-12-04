@@ -6,7 +6,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 import { FormContainer, AddBookTitle, SmallText, Input, DateLabel, Button, Label } from '../styles/book-form-styles';
 
-const API_URL = 'https://vane-books-tracker.herokuapp.com/books';
+const API_URL = process.env.REACT_APP_BOOKS_TRACKER_API_AWS;
 
 export const AddBookForm = () => {
   const fileInput = useRef();

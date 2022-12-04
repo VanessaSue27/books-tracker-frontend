@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 
@@ -5,7 +6,7 @@ import { BookCard } from './BookCard';
 import { BookListContainer } from '../styles/book-list-styles';
 import { AddBookTitle } from '../styles/book-form-styles';
 
-const API_URL = 'https://vane-books-tracker.herokuapp.com/books';
+const API_URL = process.env.REACT_APP_BOOKS_TRACKER_API_AWS;
 
 export const BooksList = () => {
   const [books, setBooks] = useState([]);
